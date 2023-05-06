@@ -1,0 +1,11 @@
+# Mise à jour du système tous les dimanches à 3h du matin
+0 3 * * 0 /usr/bin/apt-get update && /usr/bin/apt-get upgrade -y
+
+# Exécutez une sauvegarde de la base de données chaque jour à minuit
+0 0 * * * /usr/bin/mysqldump -u root -pPassword my_database > /home/user/backup/my_database_$(date +\%Y-\%m-\%d).sql
+
+# Lancez la tâche de maintenance une fois par mois à 2h du matin
+0 2 1 * * /usr/bin/bash /home/user/scripts/maintenance.sh
+
+# Changement du password admin de l'interface d'administration chaque jour à minuit
+0 0 * * * php /var/www/html/crontab/maj_password.php
