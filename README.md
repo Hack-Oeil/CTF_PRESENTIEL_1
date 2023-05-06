@@ -3,7 +3,9 @@ Préparation du challenge en présentiel
 Préparer le sac poubelle avec les différents documents (inutiles et le document crontab.txt (mélangé au reste des documents).
 
 Ecrire sur un post-it, et le placer dans une boite fermée à clef qu'il faut réussir à crocheter
+
 identifiant : guillaume@toitoimontoit.fr
+
 password : AZErty0123
 
 
