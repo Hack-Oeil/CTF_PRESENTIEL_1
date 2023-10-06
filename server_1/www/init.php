@@ -96,7 +96,7 @@ if(sizeof($_POST)) {
         <br><br>
 
         <label for="password">Mot de passe (noté sur le post-it) :</label>
-        <input type="password" id="password" name="password" value="AZErty0123" required><br><br>
+        <input type="text" id="password" name="password" value="AZErty0123" required><br><br>
 
         <label for="flag">Flag : <small><i>Double cliquez sur le champ pour pouvoir le modifier</i></small></label>
         <input type="text" id="flag" name="flag" placeholder="Laissez vide pour un flag aléatoire" disabled>
