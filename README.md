@@ -1,14 +1,14 @@
 Préparation du challenge en présentiel
 ======================================
-Préparer le sac poubelle avec les différents documents (inutiles et le document crontab.txt (mélangé au reste des documents).
+Préparer le sac poubelle avec les différents documents (inutiles et le document [crontab.txt](crontab.txt) mélangé au reste des documents).
 
 Ecrire sur un post-it, et le placer dans une boite fermée à clef qu'il faut réussir à crocheter
 
-identifiant : guillaume@toitoimontoit.fr
-
+Par défaut les identifiant sont :
+email : guillaume@toitoimontoit.fr
 password : AZErty0123
 
-
+Vous pourrez les modifier lors de la configuration du CTF
 
 
 Challenge en présentiel
@@ -16,7 +16,7 @@ Challenge en présentiel
 Dans cet exercice il est nécessaire de crocheter un cadenas pour accéder au "local poubelles" (fictif).
 L'ouverture du cadenas  donne accès à 5 minutes dans le "local poubelles", 
 dans le sac poubelle il doit y avoir des "déchets" (déchets propres) ainsi que plein de paperasse technique (tutos ssh, ftp, etc), 
-mais en réalité seule une information intéressante s'y trouve, le fichier crontab.txt nous donnant le chemin vers le fichier permettant
+mais en réalité seule une information intéressante s'y trouve, le fichier [crontab.txt](crontab.txt) nous donnant le chemin vers le fichier permettant
 de générer chaque jour le mot de passe admin.
 
 Il est également nécessaire de crocheter une serrure pour obtenir 2 minutes d'accès à un "bureau" (fictif) 
