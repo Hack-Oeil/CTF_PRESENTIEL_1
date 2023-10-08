@@ -10,6 +10,7 @@ password : AZErty0123
 
 Vous pourrez les modifier lors de la configuration du CTF
 
+Vidéo d'aide à la préparation du CTF : [ https://youtu.be/-myKbShU0Dk](https://youtu.be/-myKbShU0Dk)
 
 Challenge en présentiel
 =======================
