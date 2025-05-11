@@ -5,7 +5,7 @@ if(sizeof($_POST) > 0) {
     // guillaume est admin
     if(isset($_POST['email'])) {
         // pour des raisons de sécurité guillaume doit entrer 2 mots de passe
-        if(SHA1($_POST['email']) == '{{ EMAIL }}' && SHA1(MD5($_POST['password'])) === '{{ PASSWORD }} ') {
+        if(SHA1($_POST['email']) == '{{ EMAIL }}' && SHA1(MD5($_POST['password'])) === '{{ PASSWORD }}') {
             $form = 2;  
         } else  {
             $error = 'Erreur d\'identification';
