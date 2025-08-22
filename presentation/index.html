@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="fr">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Les CTFs de Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Vérifie si la fenêtre est dans une iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>Challenge #29</h3>
+                            <h2 class="section-title">Challenge en présentiel</h2>
+
+
+                            <p class="section-subtitle">
+                                <a target="_blank" href="https://youtu.be/-myKbShU0Dk">
+                                    <img src="./assets/images/youtube.png" />
+                                    Préparation du challenge en présentiel
+                                </a>
+                            </p>
+                            <br /><br />
+
+                            <hr>
+                            <p>Le fichier crontab à imprimer et mélanger à vos fichiers fictifs et à placer dans la
+                                "poubelle".</p>
+
+                            <pre style="border:1px solid grey; max-width:600px;overflow:auto;"># Mise à jour du système tous les dimanches à 3h du matin
+0 3 * * 0 /usr/bin/apt-get update && /usr/bin/apt-get upgrade -y
+
+# Exécutez une sauvegarde de la base de données chaque jour à minuit
+0 0 * * * /usr/bin/mysqldump -u root -pPassword my_database > /home/user/backup/my_database_$(date +\%Y-\%m-\%d).sql
+
+# Lancez la tâche de maintenance une fois par mois à 2h du matin
+0 2 1 * * /usr/bin/bash /home/user/scripts/maintenance.sh
+
+# Changement du password admin de l'interface d'administration chaque jour à minuit
+0 0 * * * php /var/www/html/crontab/maj_password.php
+</pre>
+                            <hr>
+
+                            <p class="section-subtitle">
+                                Dans cet exercice il est nécessaire de crocheter un cadenas pour accéder au "local
+                                poubelles" (fictif).
+                                L'ouverture du cadenas donne accès à 5 minutes dans le "local poubelles",
+                                dans le sac poubelle il doit y avoir des "déchets" (déchets propres) ainsi que plein de
+                                paperasse technique (tutos ssh, ftp, etc),
+                                mais en réalité seule une information intéressante s'y trouve, le fichier
+                                [crontab.txt](crontab.txt) nous donnant le chemin vers le fichier permettant
+                                de générer chaque jour le mot de passe admin.
+                                <br /><br />
+                                Il est également nécessaire de crocheter une serrure pour obtenir 2 minutes d'accès à un
+                                "bureau" (fictif)
+                                où se trouve une caisse fermée à clé qu'il faudra crocheter également (dans ce délai de
+                                2 minutes du coup) en ouvrant cette caisse on obtient le post it.
+                                <br />
+                            <h4>Aperçu:</h4>
+                            <img class="capture" src="./assets/images/capture.jpg" alt="aperçu">
+                            <br /><br />
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>Apprentissage</h3>
+                            <h2 class="section-title">Documentations et Vidéos</h2>
+                            <p class="section-subtitle">
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>Aide</h3>
+                            <h2 class="section-title">Conseils et indices</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1176173464411979806">Fil sur
+                                    le Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;" title="Remonter en tête de site"></a>
+    </div>
+</body>
+
+</html>

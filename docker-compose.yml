@@ -1,9 +1,10 @@
-version: '3.3'
 services:
   webserver:
-    build: server_1/
-    labels:
-      ho.ctf.cyrhades: webserver
+    build: ./.docker/server_http/
+    environment:
+      - HOOS_CTF_USERNAME=${HOOS_CTF_USERNAME:-}
     ports:
-      - "80:80"
-    container_name: ho-webserver
+      - ${PORT}:80
+    restart: always
+    labels:
+      ho.ctf.cyrhades: "1"
